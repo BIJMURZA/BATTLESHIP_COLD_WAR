@@ -291,8 +291,62 @@ function shlupka (event) {
     locate_albattlefield();
 }
 
+function checkNbattlefield (x, y) {
+    return enemybattlefield[x][y] === true;
+}
+
+function checkUbattlefield (x, y) {
+    return allaybattlefield[x][y] === true;
+}
+
+function shoot(event) {
+    if (move === true) {
+        let x = Math.floor(((parseInt(event.target.id) % 100) - 1) / 10);
+        let y = ((parseInt(event.target.id) % 100) - 1) % 10;
+        if (checkNbattlefield(x, y) === true){
+            document.getElementById(event.target.id).style.background = "blue";
+            shootUSSR();
+        }
+        else {
+            document.getElementById(event.target.id).style.background = "green";
+            move = false;
+            document.getElementById("arrow").src = "/icon/lot_NATO.png"
+            setTimeout(shootNATO, 3000);
+        }
+    } else if (move === false) {
+        let x = Math.floor(((parseInt(event) % 100) - 1) / 10);
+        let y = ((parseInt(event) % 100) - 1) % 10;
+        if (checkUbattlefield(x, y) === true) {
+            document.getElementById(event).style.background = "gray";
+            shootNATO();
+        }
+        else {
+            document.getElementById(event).style.background = "green";
+            document.getElementById("arrow").src = "/icon/lot_USSR.png"
+            move = true;
+            shootUSSR();
+        }
+    }
+}
+
+function shootUSSR() {
+    document.getElementById("enbattlefield").addEventListener("click", shoot);
+}
+
+function shootNATO() {
+    let id = Math.floor(Math.random()*100) + 1;
+    shoot(String(id));
+}
+
 function startShoot() {
-    newTable();
+    newTableEnbattlefield();
+    if (lot === 1) {
+        move = true;
+        shootUSSR();
+    } else if (lot === 2) {
+        move = false;
+        shootNATO();
+    }
 }
 
 function locate_albattlefield() {
@@ -319,6 +373,12 @@ function newTableAlbattlefield() {
     document.getElementById("albattlefield").classList.remove("hidden");
     document.getElementById("USSR").style.display ="block";
     locate_albattlefield ();
+}
+
+function newTableEnbattlefield() {
+    document.getElementById("enbattlefield").classList.remove("hidden");
+    document.getElementById("NATO").style.display = "block";
+    document.getElementById("arrow").style.display = "block";
 }
 
 function start() {

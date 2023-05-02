@@ -174,8 +174,27 @@ td {
     align-items: center;
 }
 
+.img_NATO {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #USSR {
     display: none;
     width: 200px;
     margin-bottom: 10px;
+}
+
+#NATO {
+    display: none;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+#arrow {
+    width: 128px;
+    height: 128px;
+    display:none;
+    margin:auto;
 }
