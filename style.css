@@ -89,7 +89,6 @@
     object-position: center;
 }
 
-
 #modalRules {
     display: none;
     position: fixed;
@@ -130,4 +129,53 @@
     border: 1px solid #888;
     width: 10%;
     text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin: 0 20px;
+    font-size: 5px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
+.battlefield {
+    display: flex;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden_id {
+    color: transparent;
+}
+
+.img_USSR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#USSR {
+    display: none;
+    width: 200px;
+    margin-bottom: 10px;
 }
