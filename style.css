@@ -1,0 +1,133 @@
+.ButtonStartGame {
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 32px;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.ButtonStartGame:hover{
+    border-color: #4B1414FF;
+    color: #4B1414FF;
+    fill: #4B1414FF;
+}
+
+.ButtonStartGame:active{
+    border-color: red;
+    color: red;
+    fill: red;
+}
+
+.ButtonModalRules {
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 32px;
+    justify-content: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.ButtonModalSettings {
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 32px;
+    justify-content: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.ButtonModal:hover{
+    border-color: #4B1414FF;
+    color: #4B1414FF;
+    fill: #4B1414FF;
+}
+
+.ButtonModal:active{
+    border-color: red;
+    color: red;
+    fill: red;
+}
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#modalRules {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: left;
+}
+
+#modalSettings {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content-settings {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 10%;
+    text-align: center;
+}
